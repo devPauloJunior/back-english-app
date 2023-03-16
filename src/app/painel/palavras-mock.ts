@@ -1,8 +1,8 @@
 import { Palavra } from '../shared/palavra.model'
 
 export const PALAVRAS: Palavra[] = [
-    { palavraEng: 'cat', palavraPtBr: 'gato' },
-    { palavraEng: 'house', palavraPtBr: 'casa' },
-    { palavraEng: 'blue', palavraPtBr: 'azul' },
-    { palavraEng: 'station', palavraPtBr: 'estação' },
+    { palavraEng: 'bread', palavraPtBr: 'pão' },
+    { palavraEng: 'coat', palavraPtBr: 'casaco' },
+    { palavraEng: 'feet', palavraPtBr: 'pé' },
+    { palavraEng: 'party', palavraPtBr: 'festa' },
 ]
