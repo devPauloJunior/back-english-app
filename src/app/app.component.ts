@@ -2,21 +2,10 @@ import { Component } from '@angular/core'; //permite decorar a class, fazendo se
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  template: `
+    <app-layout></app-layout>
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-
-  public jogoEmAndamento: boolean = true
-  public tipoEncerramento: string = "" 
-
-
-  public encerrarJogo(tipo: string): void {
-    this.jogoEmAndamento = false
-    this.tipoEncerramento = tipo
-  }
-
-  public reiniciarJogo():void {
-    this.jogoEmAndamento = true
-    this.tipoEncerramento = ""
-  }
+export class AppComponent { 
 }

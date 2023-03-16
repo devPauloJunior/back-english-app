@@ -5,5 +5,4 @@ export const PALAVRAS: Palavra[] = [
     { palavraEng: 'house', palavraPtBr: 'casa' },
     { palavraEng: 'blue', palavraPtBr: 'azul' },
     { palavraEng: 'station', palavraPtBr: 'estação' },
-    { palavraEng: 'pen', palavraPtBr: 'caneta' },
 ]

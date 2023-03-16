@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
-import { Palavra } from '../shared/palavra.model';
+import { Palavra } from '../shared/palavra.model'
 import { PALAVRAS } from './palavras-mock'
 
 @Component({
@@ -11,7 +11,7 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   public palavras: Palavra[] = PALAVRAS
   public instrucoes: string = 'Traduza a(s) palavra(s)'
-  public resposta: string = ''
+  public resposta?: string
   public rodada: number = 0
   public rodadaPalavra: Palavra
 
@@ -33,15 +33,15 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   public verificaResposta(): void {  
     if (this.rodadaPalavra.palavraPtBr == this.resposta) {
-      this.rodada++;
+      this.rodada++
       if (this.rodada === 4) {
-        this.encerrarGame.emit('vitoria');
+         this.encerrarGame.emit('vitoria');
       }
 
       this.atualizaRodada()
 
       this.progresso = this.progresso + (100 / this.palavras.length);
-      
+      console.log(this.rodada)
     } else {
       this.tentativas--;
 
@@ -52,7 +52,7 @@ export class PainelComponent implements OnInit, OnDestroy {
   }
 
   public atualizaRodada(): void {
-    this.rodadaPalavra = this.palavras[this.rodada];
-    this.resposta = '';
+    this.rodadaPalavra = this.palavras[this.rodada]
+    this.resposta = ''
   }
 }

@@ -13,6 +13,8 @@ export class TentativasComponent implements OnChanges, OnInit {
   public coracoes: Coracao[] = [
     new Coracao(true),
     new Coracao(true),
+    new Coracao(true),
+    new Coracao(true),
     new Coracao(true)
   ]
 
