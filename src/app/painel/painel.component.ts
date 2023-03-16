@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import { Palavra } from '../shared/palavra.model';
+import { PALAVRAS } from './palavras-mock'
 
 @Component({
   selector: 'app-painel',
@@ -7,18 +9,19 @@ import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/cor
 })
 export class PainelComponent implements OnInit, OnDestroy {
 
-  public palavras: Palavras[] = PALAVRAS;
-  public instrucoes: string = 'Traduza a(s) palavra(s)';
-  public resposta: string = '';
-  public rodada: number = 0;
-  public rodadaPalavra: Palavras;
+  public palavras: Palavra[] = PALAVRAS
+  public instrucoes: string = 'Traduza a(s) palavra(s)'
+  public resposta: string = ''
+  public rodada: number = 0
+  public rodadaPalavra: Palavra
 
-  public progresso: number = 0;
-  public tentativas: number = 5;
+  public progresso: number = 0
+  public tentativas: number = 5
 
   @Output() public encerrarGame : EventEmitter<string> = new EventEmitter
 
   constructor() {
+    this.rodadaPalavra = this.palavras[this.rodada]
     this.atualizaRodada();
   }
   ngOnInit() {}

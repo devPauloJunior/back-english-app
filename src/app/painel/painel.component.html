@@ -2,27 +2,29 @@
     <div class="jumbotron">
         <div class="row">
             <div class="col-sm-6">
-                <p>progress........</p>
+                <app-progresso [progresso]="progresso"></app-progresso>
             </div>
             <div class="col-sm-6">
                 <div class="d-flex justify-content-end">
-                    <p>Tentativas</p>
+                    <app-tentativas [tentativas]="tentativas"></app-tentativas>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <h6>instruções</h6>
-                <p>rodada</p>
+                <h6>{{ instrucoes }}</h6>
+                <p>{{ rodadaPalavra.palavraEng }}</p>
                 <div class="form-group">
-                    <textarea cols="30" rows="3" class="form-control"></textarea>
+                    <textarea cols="30" rows="3" class="form-control" (input)="atualizaResposta($event)"
+                        [value]="resposta"></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary">Verificar Resposta</button>
+                    <button type="button" class="btn btn-primary" (click)='verificaResposta()'>Verificar
+                        Resposta</button>
                 </div>
             </div>
         </div>

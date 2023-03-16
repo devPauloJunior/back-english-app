@@ -1,5 +1,1 @@
-<img src="../../assets/coracao_cheio.png" alt="">
-<img src="../../assets/coracao_cheio.png" alt="">
-<img src="../../assets/coracao_cheio.png" alt="">
-<img src="../../assets/coracao_vazio.png" alt="">
-<img src="../../assets/coracao_vazio.png" alt="">
+<img *ngFor="let coracao of coracoes" [src]="coracao.exibeCoracao()" />
