@@ -8,7 +8,7 @@ import { Coracao } from '../shared/coracao.model';
 })
 export class TentativasComponent implements OnChanges, OnInit {
 
-  @Input() public tentativas: number = 0;
+  @Input() public tentativas!: number
 
   public coracoes: Coracao[] = [
     new Coracao(true),

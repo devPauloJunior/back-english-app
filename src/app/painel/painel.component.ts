@@ -11,7 +11,7 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   public palavras: Palavra[] = PALAVRAS
   public instrucoes: string = 'Traduza a(s) palavra(s)'
-  public resposta?: string
+  public resposta: string = ''
   public rodada: number = 0
   public rodadaPalavra: Palavra
 

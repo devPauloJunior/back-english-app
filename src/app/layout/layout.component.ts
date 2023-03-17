@@ -10,7 +10,6 @@ export class LayoutComponent {
   public jogoEmAndamento: boolean = true
   public tipoEncerramento: string = "" 
 
-
   public encerrarGame(tipo: string): void {
     this.jogoEmAndamento = false
     this.tipoEncerramento = tipo
